@@ -11,3 +11,6 @@ The manual tools package is ignored by Git and can be downloaded again at any ti
 ## Update translations
 
 Install MSYS2 with `po4a` and `diffutils`, then run `update_translations.bat`.
+## Publish
+
+Push a version tag such as `v1.7.23` to build the manuals and publish `winmerge-manual.zip` as a GitHub release asset. WinMerge's `DownloadDeps.cmd` retrieves the latest asset.
