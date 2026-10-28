@@ -1,6 +1,12 @@
 @echo off
 setlocal
 pushd "%~dp0"
+where 7z > NUL 2> NUL
+if errorlevel 1 (
+  echo 7-Zip is not installed
+  popd
+  exit /b 1
+)
 set "downloadsdir=build\WinMergeManualDeps"
 if not exist "%downloadsdir%" mkdir "%downloadsdir%"
 
