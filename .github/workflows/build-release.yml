@@ -1,0 +1,24 @@
+name: Build and release manual
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build HTML Help files
+        run: .\BuildManual.cmd
+      - name: Package manuals
+        shell: pwsh
+        run: Compress-Archive -Path Build\Manual\htmlhelp\WinMerge*.chm -DestinationPath winmerge-manual.zip
+      - name: Publish release asset
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$env:GITHUB_REF_NAME" .\winmerge-manual.zip --title "$env:GITHUB_REF_NAME" --generate-notes
