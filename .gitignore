@@ -1,0 +1,12 @@
+Build/
+BuildTmp/
+Tools/bin/
+Tools/dtd/
+Tools/hhc/
+Tools/include/
+Tools/lib/
+Tools/saxon/
+Tools/xerces/
+Tools/SBAppLocale.exe
+build/
+htmlhelp/
