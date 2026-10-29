@@ -10,3 +10,6 @@ Tools/xerces/
 Tools/SBAppLocale.exe
 build/
 htmlhelp/
+.vs/
+Manual.vcxproj.user
+Tools/ReadMe_ENG.html
