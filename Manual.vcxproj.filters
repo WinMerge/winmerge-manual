@@ -478,9 +478,6 @@
     <Xml Include="Spanish\xsl\htmlhelp.xsl">
       <Filter>Spanish\xsl</Filter>
     </Xml>
-    <Xml Include="Polish\_Copyrights.xml" />
-    <Xml Include="Polish\_VersionNumbers.xml" />
-    <Xml Include="Shared\_VersionNumbers.xml" />
     <Xml Include="Polish\About_Doc.xml">
       <Filter>Polish</Filter>
     </Xml>
@@ -552,6 +549,18 @@
     </Xml>
     <Xml Include="Polish\xsl\htmlhelp.xsl">
       <Filter>Polish\xsl</Filter>
+    </Xml>
+    <Xml Include="Polish\_VersionNumbers.xml">
+      <Filter>Polish</Filter>
+    </Xml>
+    <Xml Include="Shared\_VersionNumbers.xml">
+      <Filter>Shared</Filter>
+    </Xml>
+    <Xml Include="Polish\_Copyrights.xml">
+      <Filter>Polish</Filter>
+    </Xml>
+    <Xml Include="Shared\_Copyrights.xml">
+      <Filter>Shared</Filter>
     </Xml>
   </ItemGroup>
   <ItemGroup>
@@ -2075,7 +2084,6 @@
     <Image Include="Spanish\screenshots\word-diff-nowhite.png">
       <Filter>Spanish\screenshots</Filter>
     </Image>
-    <Image Include="Polish\screenshots\aborted.png" />
     <Image Include="Polish\screenshots\allleft_btn.png">
       <Filter>Polish\screenshots</Filter>
     </Image>
@@ -2314,6 +2322,9 @@
       <Filter>Polish\screenshots</Filter>
     </Image>
     <Image Include="Polish\screenshots\word-diff-nowhite.png">
+      <Filter>Polish\screenshots</Filter>
+    </Image>
+    <Image Include="Polish\screenshots\aborted.png">
       <Filter>Polish\screenshots</Filter>
     </Image>
   </ItemGroup>

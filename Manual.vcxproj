@@ -221,6 +221,7 @@
     <Xml Include="Shared\xsl\common.xsl" />
     <Xml Include="Shared\xsl\html.xsl" />
     <Xml Include="Shared\xsl\htmlhelp.xsl" />
+    <Xml Include="Shared\_Copyrights.xml" />
     <Xml Include="Shared\_VersionNumbers.xml" />
     <Xml Include="Spanish\About_Doc.xml" />
     <Xml Include="Spanish\Command_line.xml" />
