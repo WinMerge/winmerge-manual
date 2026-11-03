@@ -33,6 +33,12 @@
       <arg choice="opt" rep="norepeat"><option>/f</option>
       <replaceable>filter</replaceable></arg>
 
+      <arg choice="opt" rep="norepeat"><option>/displayfilter</option>
+      <replaceable>filter-expression</replaceable></arg>
+
+      <arg choice="opt" rep="norepeat"><option>/fd</option>
+      <replaceable>filter-expression</replaceable></arg>
+
       <arg choice="opt" rep="norepeat"><option>/m</option>
       <replaceable>compare-method</replaceable></arg>
 
@@ -178,6 +184,22 @@
       <term><option>/?</option></term>
       <listitem>
         <para>Opens WinMerge Help at this topic.</para>
+      </listitem>
+    </varlistentry>
+
+    <varlistentry>
+      <indexterm>
+        <primary>display filter</primary>
+        <secondary>applying in command line</secondary>
+      </indexterm>
+
+      <term><option>/displayfilter <replaceable>filter-expression</replaceable></option></term>
+      <term><option>/fd <replaceable>filter-expression</replaceable></option></term>
+      <listitem>
+        <para>Applies a display filter expression and shows the display filter bar.
+        The filter target is inferred from the opened comparison window type:
+        Text/Table compare applies a display line filter, and Folder compare
+        applies a display file filter.</para>
       </listitem>
     </varlistentry>
 
