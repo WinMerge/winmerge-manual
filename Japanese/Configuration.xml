@@ -1642,18 +1642,17 @@ Frhed の設定<indexterm>
     </section>
 
     <section>
-      <title>Prefer WIC decoder</title>
+      <title>WICデコーダーを優先する</title>
       <itemizedlist>
         <listitem>
           <para>
-<option>Disabled</option> (default): WinMerge uses its standard image
-decoder.</para>
+<option>無効</option> (デフォルト): WinMerge は標準の画像デコーダーを使用します。</para>
         </listitem>
 
         <listitem>
           <para>
-<option>Enabled</option>: WinMerge prefers the Windows Imaging Component
-(WIC) decoder when opening images.</para>
+<option>有効</option>: WinMerge は画像を開く際に Windows Imaging Component (WIC)
+デコーダーを優先的に使用します。</para>
         </listitem>
       </itemizedlist>
     </section>
@@ -2024,15 +2023,13 @@ Rendering Modes</ulink>を参照してください。</para>
                 <itemizedlist>
                   <listitem>
                     <para>
-<guilabel>Character level</guilabel> (default): Highlights individual
-characters that are different. This option can be useful if you are looking
-for changes within words, or for file formats that do not have clear word
-breaks.</para>
+<guilabel>文字単位</guilabel>(デフォルト): 異なる文字をハイライトします。 このオプションは、単語内の変更を探す場合や、
+明確な単語分割をしていないファイルの場合に役立つでしょう。</para>
                   </listitem>
 
                   <listitem>
                     <para>
-<guilabel>Word-level</guilabel>: Highlights entire words that are different.</para>
+<guilabel>単語単位</guilabel>: 差異のある単語全体をハイライトします。</para>
 
                     <itemizedlist>
                       <listitem>
@@ -2279,20 +2276,18 @@ linkend="Configuration_syntaxhighlight"
 
   <section id="Configuration_colors_system">
     <title>
-Colors &gt; System page<indexterm>
-        <primary>system colors</primary>
+色 → システム ページ<indexterm>
+        <primary>システムカラー</primary>
 
         <secondary>オプション</secondary>
       </indexterm></title>
 
     <para>
-Use this page to customize the system colors used by WinMerge. Enable
-<guilabel>Use custom system colors</guilabel>, select a system color from
-the list, and click its color box to choose a replacement color.</para>
+このページでは、WinMerge で使用されるシステムの色をカスタマイズできます。<guilabel>カスタム
+システム色を使用する</guilabel> を有効にし、リストからシステムの色を選択したあと、その色ボックスをクリックして変更後の色を選択します。</para>
 
     <para>
-To revert to the default system colors, click
-<guibutton>Defaults</guibutton>.</para>
+デフォルトのシステムの色に戻すには、<guibutton>デフォルト</guibutton> をクリックします。</para>
   </section>
 
   <section id="Configuration_archive">
@@ -2643,18 +2638,16 @@ WinMerge が、非Unicode ファイルを扱う際の、デフォルトコード
 
       <important>
         <para>
-Character conversions can result in lossy conversions. Use this option with
-care when files use a codepage that differs from your current codepage.</para>
+文字変換は不可逆（情報が失われる）変換になる可能性があります。現在のコードページとは異なるコードページを使用しているファイルを扱う場合は、このオプションの使用にご注意ください。</para>
       </important>
 
       <itemizedlist>
         <listitem>
           <para>
-<option>Enabled</option> (default): WinMerge detects the codepage for these
-extensions: <filename class="extension">html</filename>, <filename
-class="extension">rc</filename> (resource files for VC++)  and <filename
-class="extension">xml</filename>. The detected codepage overrides the
-setting for the default codepage option.</para>
+<option>有効</option> (デフォルト): WinMerge は、<filename
+class="extension">html</filename>、<filename class="extension">rc</filename>
+(VC++ のリソースファイル)、および <filename class="extension">xml</filename>
+の各拡張子について、コードページを自動検出します。検出されたコードページは、デフォルトのコードページオプションの設定よりも優先されます。</para>
 
           <para>
 このオプションは、あなたのドキュメントが、 Windows のものと異なるコードページを使用する場合に重要です。</para>
@@ -2679,8 +2672,8 @@ Explorer は、コードページ選択機能を提供しています。 外部�
 
         <listitem>
           <para>
-<option>Disabled</option>: WinMerge does not read codepage information from
-the source files. It uses the default codepage setting instead.</para>
+<option>無効</option>: WinMerge
+はソースファイルからコードページ情報を読み込みません。代わりにデフォルトのコードページ設定を使用します。</para>
         </listitem>
       </itemizedlist>
     </section>
@@ -2760,14 +2753,10 @@ The <option>コンテキストメニューに追加</option>オプションは�
     </section>
 
     <section>
-      <title>Jump List</title>
+      <title>ジャンプリスト</title>
 
       <para>
-The Jump List displays recent comparisons and provides shortcuts for
-starting new text, table, binary, image, webpage, and folder comparisons, as
-well as comparing clipboard contents. Select an item to open it again, or
-click <guibutton>Clear all recent items</guibutton> to remove the recent
-comparison history.</para>
+ジャンプリストには最近の比較履歴が表示され、テキスト、テーブル、バイナリ、画像、ウェブページ、フォルダーの新しい比較を開始するためのショートカットや、クリップボードの内容を比較するショートカットが提供されます。項目を選択して再度開くか、<guibutton>最近のすべての項目をクリア</guibutton>をクリックして最近の比較履歴を削除できます。</para>
     </section>
   </section>
 </article>

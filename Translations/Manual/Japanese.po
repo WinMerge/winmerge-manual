@@ -1,10 +1,10 @@
 # This file is from WinMerge <https://winmerge.org/>
 # Released under the "GNU General Public License"
-# 
+#
 # Translators:
 # * Takahiro Yoshihara
 # * Takashi Sawanaka <sawanaka at d1.dion.ne.jp>
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: WinMerge\n"
@@ -11379,8 +11379,6 @@ msgstr ""
 
 #. type: Content of: <article><section><section><title>
 #: English/Configuration.xml:2051
-#. type: Content of: <article><section><section><title>
-#: English/Configuration.xml:2051
 msgid "Prefer WIC decoder"
 msgstr "WICデコーダーを優先する"
 
@@ -11390,8 +11388,8 @@ msgid ""
 "<option>Disabled</option> (default): WinMerge uses its standard image "
 "decoder."
 msgstr ""
-"<option>無効</option> (デフォルト): WinMerge は標準の画像デコーダーを使用し"
-"ます。"
+"<option>無効</option> (デフォルト): WinMerge は標準の画像デコーダーを使用しま"
+"す。"
 
 #. type: Content of: <article><section><section><itemizedlist><listitem><para>
 #: English/Configuration.xml:2061
@@ -11988,16 +11986,15 @@ msgid ""
 "for changes within words, or for file formats that do not have clear word "
 "breaks."
 msgstr ""
-"<guilabel>文字単位</guilabel>(デフォルト): 異なる文字をハイライトします。 このオプション"
-"は、単語内の変更を探す場合や、 明確な単語分割をしていないファイルの場合に役立"
-"つでしょう。"
+"<guilabel>文字単位</guilabel>(デフォルト): 異なる文字をハイライトします。 こ"
+"のオプションは、単語内の変更を探す場合や、 明確な単語分割をしていないファイル"
+"の場合に役立つでしょう。"
 
 #. type: Content of: <article><section><section><variablelist><varlistentry><listitem><itemizedlist><listitem><itemizedlist><listitem><para>
+#: English/Configuration.xml:2534
 msgid ""
 "<guilabel>Word-level</guilabel>: Highlights entire words that are different."
-msgstr ""
-"<guilabel>単語単位</guilabel>: 差異のある単語全体をハイライトしま"
-"す。"
+msgstr "<guilabel>単語単位</guilabel>: 差異のある単語全体をハイライトします。"
 
 #. type: Content of: <article><section><section><variablelist><varlistentry><listitem><itemizedlist><listitem><itemizedlist><listitem><itemizedlist><listitem><para>
 #: English/Configuration.xml:2541
@@ -12382,10 +12379,8 @@ msgstr ""
 
 #. type: Content of: <article><section><title><indexterm><primary>
 #: English/Configuration.xml:2852
-#, fuzzy
-#| msgid "text colors"
 msgid "system colors"
-msgstr "文字の色"
+msgstr "システムカラー"
 
 #. type: Content of: <article><section><title>
 #: English/Configuration.xml:2851
@@ -12400,8 +12395,8 @@ msgid ""
 "the list, and click its color box to choose a replacement color."
 msgstr ""
 "このページでは、WinMerge で使用されるシステムの色をカスタマイズできます。"
-"<guilabel>カスタム システム色を使用する</guilabel> を有効にし、リストからシ"
-"ステムの色を選択したあと、その色ボックスをクリックして変更後の色を選択します。"
+"<guilabel>カスタム システム色を使用する</guilabel> を有効にし、リストからシス"
+"テムの色を選択したあと、その色ボックスをクリックして変更後の色を選択します。"
 
 #. type: Content of: <article><section><para>
 #: English/Configuration.xml:2865
@@ -12985,16 +12980,9 @@ msgid ""
 "Character conversions can result in lossy conversions. Use this option with "
 "care when files use a codepage that differs from your current codepage."
 msgstr ""
-
-#. type: Content of: <article><section><section><important><para>
-#: English/Configuration.xml:3323
-msgid ""
-"Character conversions can result in lossy conversions. Use this option with "
-"care when files use a codepage that differs from your current codepage."
-msgstr ""
-"文字変換は不可逆（情報が失われる）変換になる可能性があります。現在のコードページ"
-"とは異なるコードページを使用しているファイルを扱う場合は、このオプションの使用に"
-"ご注意ください。"
+"文字変換は不可逆（情報が失われる）変換になる可能性があります。現在のコード"
+"ページとは異なるコードページを使用しているファイルを扱う場合は、このオプショ"
+"ンの使用にご注意ください。"
 
 #. type: Content of: <article><section><section><itemizedlist><listitem><para>
 #: English/Configuration.xml:3332
@@ -13005,11 +12993,12 @@ msgid ""
 "class=\"extension\">xml</filename>. The detected codepage overrides the "
 "setting for the default codepage option."
 msgstr ""
-"<option>有効</option> (デフォルト): WinMerge は、<filename class=\"extension"
-"\">html</filename>、<filename class=\"extension\">rc</filename> (VC++ のリソー"
-"スファイル)、および <filename class=\"extension\">xml</filename> の各拡張子に"
-"ついて、コードページを自動検出します。検出されたコードページは、デフォルトのコー"
-"ドページオプションの設定よりも優先されます。"
+"<option>有効</option> (デフォルト): WinMerge は、<filename "
+"class=\"extension\">html</filename>、<filename class=\"extension\">rc</"
+"filename> (VC++ のリソースファイル)、および <filename "
+"class=\"extension\">xml</filename> の各拡張子について、コードページを自動検出"
+"します。検出されたコードページは、デフォルトのコードページオプションの設定よ"
+"りも優先されます。"
 
 #. type: Content of: <article><section><section><itemizedlist><listitem><para>
 #: English/Configuration.xml:3340
@@ -13059,20 +13048,14 @@ msgstr ""
 "Explorer は、コードページ選択機能を提供しています。 外部エディターが、カスタ"
 "ムコードページをサポートしていない場合、 このオプションは無効にしてください。"
 
-#. type: Content of: <article><section><section><para>
-#: English/Configuration.xml:3471
+#. type: Content of: <article><section><section><itemizedlist><listitem><para>
+#: English/Configuration.xml:3372
 msgid ""
-"The Jump List displays recent comparisons and provides shortcuts for "
-"starting new text, table, binary, image, webpage, and folder comparisons, as "
-"well as comparing clipboard contents. Select an item to open it again, or "
-"click <guibutton>Clear all recent items</guibutton> to remove the recent "
-"comparison history."
+"<option>Disabled</option>: WinMerge does not read codepage information from "
+"the source files. It uses the default codepage setting instead."
 msgstr ""
-"ジャンプリストには最近の比較履歴が表示され、テキスト、テーブル、バイナリ、画像"
-"、ウェブページ、フォルダーの新しい比較を開始するためのショートカットや、クリッ"
-"プボードの内容を比較するショートカットが提供されます。項目を選択して再度開くか"
-、<guibutton>最近のすべての項目をクリア</guibutton>をクリックして最近の比較履"
-"歴を削除できます。"
+"<option>無効</option>: WinMerge はソースファイルからコードページ情報を読み"
+"込みません。代わりにデフォルトのコードページ設定を使用します。"
 
 #. type: Content of: <article><section><section><title>
 #: English/Configuration.xml:3381
@@ -13176,10 +13159,8 @@ msgstr ""
 
 #. type: Content of: <article><section><section><title>
 #: English/Configuration.xml:3468
-#, fuzzy
-#| msgid "List"
 msgid "Jump List"
-msgstr "List"
+msgstr "ジャンプリスト"
 
 #. type: Content of: <article><section><section><para>
 #: English/Configuration.xml:3471
@@ -13190,6 +13171,11 @@ msgid ""
 "click <guibutton>Clear all recent items</guibutton> to remove the recent "
 "comparison history."
 msgstr ""
+"ジャンプリストには最近の比較履歴が表示され、テキスト、テーブル、バイナリ、画"
+"像、ウェブページ、フォルダーの新しい比較を開始するためのショートカットや、ク"
+"リップボードの内容を比較するショートカットが提供されます。項目を選択して再度"
+"開くか、<guibutton>最近のすべての項目をクリア</guibutton>をクリックして最近の"
+"比較履歴を削除できます。"
 
 #. type: Content of: <article><title>
 #: English/Faq.xml:3

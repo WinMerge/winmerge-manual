@@ -17,7 +17,7 @@ jobs:
         run: .\BuildManual.cmd
       - name: Package manuals
         shell: pwsh
-        run: Compress-Archive -Path Build\Manual\htmlhelp\WinMerge*.chm -DestinationPath winmerge-manual.zip
+        run: Compress-Archive -Path Build\Manual\htmlhelp\WinMerge*.chm, Build\Manual\html-* -DestinationPath winmerge-manual.zip
       - name: Publish release asset
         env:
           GH_TOKEN: ${{ github.token }}

@@ -1,4 +1,4 @@
-Docs/Manual/Manual.cfg text eol=lf
-Docs/Manual/English/*.xml text eol=lf
-Docs/Manual/Translations/Manual/*.po text eol=lf
-Docs/Manual/Translations/Manual/*.pot text eol=lf
+Manual.cfg text eol=lf
+English/*.xml text eol=lf
+Translations/Manual/*.po text eol=lf
+Translations/Manual/*.pot text eol=lf
