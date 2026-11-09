@@ -1965,6 +1965,23 @@ imágenes.</para>
     </section>
 
     <section>
+      <title>Prefer WIC decoder</title>
+      <itemizedlist>
+        <listitem>
+          <para>
+<option>Disabled</option> (default): WinMerge uses its standard image
+decoder.</para>
+        </listitem>
+
+        <listitem>
+          <para>
+<option>Enabled</option>: WinMerge prefers the Windows Imaging Component
+(WIC) decoder when opening images.</para>
+        </listitem>
+      </itemizedlist>
+    </section>
+
+    <section>
       <title>Resultado de OCR</title>
       <itemizedlist>
         <listitem>
@@ -2385,16 +2402,15 @@ líneas</guimenuitem> </menuchoice>.</para>
                 <itemizedlist>
                   <listitem>
                     <para>
-<guilabel>A nivel de carácter</guilabel>: resalta los caracteres
-individuales que son diferentes. Esta opción puede resultar útil si busca
-cambios dentro de las palabras o en formatos de archivo que no tienen
-separaciones claras entre palabras.</para>
+<guilabel>Character level</guilabel> (default): Highlights individual
+characters that are different. This option can be useful if you are looking
+for changes within words, or for file formats that do not have clear word
+breaks.</para>
                   </listitem>
 
                   <listitem>
                     <para>
-<guilabel>A nivel de palabra</guilabel> (predeterminado): resalta las
-palabras completas que son diferentes.</para>
+<guilabel>Word-level</guilabel>: Highlights entire words that are different.</para>
 
                     <itemizedlist>
                       <listitem>
@@ -2700,6 +2716,24 @@ recuadro.</para>
     <para>
 Para volver a los colores predeterminados de un esquema, seleccione otro
 esquema y vuelva al esquema modificado.</para>
+  </section>
+
+  <section id="Configuration_colors_system">
+    <title>
+Colors &gt; System page<indexterm>
+        <primary>system colors</primary>
+
+        <secondary>opciones</secondary>
+      </indexterm></title>
+
+    <para>
+Use this page to customize the system colors used by WinMerge. Enable
+<guilabel>Use custom system colors</guilabel>, select a system color from
+the list, and click its color box to choose a replacement color.</para>
+
+    <para>
+To revert to the default system colors, click
+<guibutton>Defaults</guibutton>.</para>
   </section>
 
   <section id="Configuration_archive">
@@ -3097,32 +3131,18 @@ codificación de forma explícita. Por ejemplo, <userinput>UTF-8</userinput> o
 
       <important>
         <para>
-<!--What option? The one in the Options page? If it should always be unchecked, 
-why is the option there? Also, should we mention WinMergeU.exe when we mention WinMerge.exe,
-or is this understood?-->
-Desmarque esta opción en <filename>WinMerge.exe</filename>. Las conversiones
-de caracteres pueden provocar pérdidas de información y el riesgo es muy
-elevado. <filename>WinMerge.exe</filename> solo puede mostrar archivos con
-su codificación actual.</para>
+Character conversions can result in lossy conversions. Use this option with
+care when files use a codepage that differs from your current codepage.</para>
       </important>
 
       <itemizedlist>
         <listitem>
           <para>
-<option>Desactivado</option> (predeterminado): WinMerge no lee la
-información de la codificación de caracteres de los archivos de origen. En
-su lugar, utiliza la configuración predeterminada de codificación de
-caracteres.</para>
-        </listitem>
-
-        <listitem>
-          <para>
-<option>Activado</option>: WinMerge detecta la codificación de caracteres
-para estas extensiones: <filename class="extension">html</filename>,
-<filename class="extension">rc</filename> (archivos de recursos para VC++) y
-<filename class="extension">xml</filename>. La codificación de caracteres
-detectada anula la configuración de la opción de codificación de caracteres
-predeterminada.</para>
+<option>Enabled</option> (default): WinMerge detects the codepage for these
+extensions: <filename class="extension">html</filename>, <filename
+class="extension">rc</filename> (resource files for VC++)  and <filename
+class="extension">xml</filename>. The detected codepage overrides the
+setting for the default codepage option.</para>
 
           <para>
 Esta opción resulta útil cuando sus documentos utilizan una codificación
@@ -3147,6 +3167,12 @@ externo. Para copiar en WinMerge, Internet Explorer ofrece la posibilidad de
 seleccionar la codificación. Si su editor externo no admite codificaciones
 personalizadas, desactive esta opción.</para>
           </caution>
+        </listitem>
+
+        <listitem>
+          <para>
+<option>Disabled</option>: WinMerge does not read codepage information from
+the source files. It uses the default codepage setting instead.</para>
         </listitem>
       </itemizedlist>
     </section>
@@ -3226,6 +3252,17 @@ como</guimenuitem> al menú contextual del Explorador.</para>
       <para>
 <xref linkend="OpenPaths_shell-integ" /> explica cómo utilizar los atajos de
 teclado de WinMerge y Comparar.</para>
+    </section>
+
+    <section>
+      <title>Jump List</title>
+
+      <para>
+The Jump List displays recent comparisons and provides shortcuts for
+starting new text, table, binary, image, webpage, and folder comparisons, as
+well as comparing clipboard contents. Select an item to open it again, or
+click <guibutton>Clear all recent items</guibutton> to remove the recent
+comparison history.</para>
     </section>
   </section>
 </article>

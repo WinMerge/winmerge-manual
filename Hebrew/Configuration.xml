@@ -1808,6 +1808,23 @@ Windows) או OEM (ערכת התווים של DOS). ניתן לבחור גם א�
     </section>
 
     <section>
+      <title>Prefer WIC decoder</title>
+      <itemizedlist>
+        <listitem>
+          <para>
+<option>Disabled</option> (default): WinMerge uses its standard image
+decoder.</para>
+        </listitem>
+
+        <listitem>
+          <para>
+<option>Enabled</option>: WinMerge prefers the Windows Imaging Component
+(WIC) decoder when opening images.</para>
+        </listitem>
+      </itemizedlist>
+    </section>
+
+    <section>
       <title>תוצאת OCR</title>
       <itemizedlist>
         <listitem>
@@ -2190,14 +2207,15 @@ url="https://learn.microsoft.com/en-us/windows/win32/api/dwrite/ne-dwrite-dwrite
                 <itemizedlist>
                   <listitem>
                     <para>
-<guilabel>רמת תו</guilabel>: מדגיש תווים בודדים השונים זה מזה. אפשרות זו
-יכולה להיות שימושית אם אתה מחפש שינויים בתוך מילים, או עבור פורמטי קבצים
-שאין להם מעברי מילים ברורים.</para>
+<guilabel>Character level</guilabel> (default): Highlights individual
+characters that are different. This option can be useful if you are looking
+for changes within words, or for file formats that do not have clear word
+breaks.</para>
                   </listitem>
 
                   <listitem>
                     <para>
-<guilabel>רמת מילה</guilabel> (ברירת מחדל): מדגיש מילים שלמות השונות זו מזו.</para>
+<guilabel>Word-level</guilabel>: Highlights entire words that are different.</para>
 
                     <itemizedlist>
                       <listitem>
@@ -2472,6 +2490,24 @@ your preferred color settings.</para>
 
     <para>
 כדי לחזור לצבעי ברירת המחדל של ערכה, בחר ערכה אחרת וחזור לערכה ששונתה.</para>
+  </section>
+
+  <section id="Configuration_colors_system">
+    <title>
+Colors &gt; System page<indexterm>
+        <primary>system colors</primary>
+
+        <secondary>אפשרויות</secondary>
+      </indexterm></title>
+
+    <para>
+Use this page to customize the system colors used by WinMerge. Enable
+<guilabel>Use custom system colors</guilabel>, select a system color from
+the list, and click its color box to choose a replacement color.</para>
+
+    <para>
+To revert to the default system colors, click
+<guibutton>Defaults</guibutton>.</para>
   </section>
 
   <section id="Configuration_archive">
@@ -2836,29 +2872,18 @@ Microsoft: קידודי עמודים הנתמכים על ידי Windows </ulink>
 
       <important>
         <para>
-<!--What option? The one in the Options page? If it should always be unchecked, 
-why is the option there? Also, should we mention WinMergeU.exe when we mention WinMerge.exe,
-or is this understood?-->
-בטל את הסימון באפשרות זו ב-<filename>WinMerge.exe</filename>. המרות תווים
-עלולות לגרום להמרות אובדניות והסיכון גבוה
-מאוד. <filename>WinMerge.exe</filename> יכול להציג קבצים רק עם קידוד העמודים
-הנוכחי שלך.</para>
+Character conversions can result in lossy conversions. Use this option with
+care when files use a codepage that differs from your current codepage.</para>
       </important>
 
       <itemizedlist>
         <listitem>
           <para>
-<option>Disabled</option> (ברירת מחדל): WinMerge אינו קורא מידע קידוד עמודים
-מקבצי המקור. הוא משתמש בהגדרת קידוד העמודים ברירת המחדל במקום זאת.</para>
-        </listitem>
-
-        <listitem>
-          <para>
-<option>Enabled</option>: WinMerge מזהה את קידוד העמודים עבור סיומות אלה:
-<filename class="extension">html</filename>, <filename
-class="extension">rc</filename> (קבצי משאבים עבור VC++) ו-<filename
-class="extension">xml</filename>. קידוד העמודים המזוהה דורס את ההגדרה עבור
-אפשרות קידוד העמודים ברירת המחדל.</para>
+<option>Enabled</option> (default): WinMerge detects the codepage for these
+extensions: <filename class="extension">html</filename>, <filename
+class="extension">rc</filename> (resource files for VC++)  and <filename
+class="extension">xml</filename>. The detected codepage overrides the
+setting for the default codepage option.</para>
 
           <para>
 אפשרות זו מעניינת כאשר המסמכים שלך משתמשים בקידוד עמודים ששונה מקידוד
@@ -2881,6 +2906,12 @@ WinMerge מזהה גם הבדל בקידוד העמודים בין הקבצים 
 ל-WinMerge, Internet Explorer מציע בחירת קידוד עמודים. אם העורך החיצוני שלך
 אינו תומך בקידודי עמודים מותאמים אישית, השבת אפשרות זו.</para>
           </caution>
+        </listitem>
+
+        <listitem>
+          <para>
+<option>Disabled</option>: WinMerge does not read codepage information from
+the source files. It uses the default codepage setting instead.</para>
         </listitem>
       </itemizedlist>
     </section>
@@ -2958,6 +2989,17 @@ WinMerge מזהה גם הבדל בקידוד העמודים בין הקבצים 
       <para>
 <xref linkend="OpenPaths_shell-integ" /> מתאר כיצד להשתמש בקיצורי הדרך של
 WinMerge והשווה.</para>
+    </section>
+
+    <section>
+      <title>Jump List</title>
+
+      <para>
+The Jump List displays recent comparisons and provides shortcuts for
+starting new text, table, binary, image, webpage, and folder comparisons, as
+well as comparing clipboard contents. Select an item to open it again, or
+click <guibutton>Clear all recent items</guibutton> to remove the recent
+comparison history.</para>
     </section>
   </section>
 </article>

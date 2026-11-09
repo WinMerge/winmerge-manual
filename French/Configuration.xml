@@ -1966,6 +1966,23 @@ images.</para>
     </section>
 
     <section>
+      <title>Prefer WIC decoder</title>
+      <itemizedlist>
+        <listitem>
+          <para>
+<option>Disabled</option> (default): WinMerge uses its standard image
+decoder.</para>
+        </listitem>
+
+        <listitem>
+          <para>
+<option>Enabled</option>: WinMerge prefers the Windows Imaging Component
+(WIC) decoder when opening images.</para>
+        </listitem>
+      </itemizedlist>
+    </section>
+
+    <section>
       <title>Résultat OCR</title>
       <itemizedlist>
         <listitem>
@@ -2385,16 +2402,15 @@ différences de ligne</guimenuitem> </menuchoice>.</para>
                 <itemizedlist>
                   <listitem>
                     <para>
-<guilabel>Précision au caractère</guilabel> : met en évidence les caractères
-individuels qui diffèrent. Cette option peut être utile si vous recherchez
-des changements à l'intérieur des mots, ou pour des formats de fichiers
-n'ayant pas de coupures de mots claires.</para>
+<guilabel>Character level</guilabel> (default): Highlights individual
+characters that are different. This option can be useful if you are looking
+for changes within words, or for file formats that do not have clear word
+breaks.</para>
                   </listitem>
 
                   <listitem>
                     <para>
-<guilabel>Précision au mot</guilabel> (par défaut) : met en évidence les
-mots entiers qui sont différents.</para>
+<guilabel>Word-level</guilabel>: Highlights entire words that are different.</para>
 
                     <itemizedlist>
                       <listitem>
@@ -2693,6 +2709,24 @@ sur <guibutton>OK</guibutton> pour charger la nouvelle couleur dans la case.</pa
     <para>
 Pour revenir aux couleurs par défaut d'un schéma, choisissez un autre schéma
 puis revenez au schéma modifié.</para>
+  </section>
+
+  <section id="Configuration_colors_system">
+    <title>
+Colors &gt; System page<indexterm>
+        <primary>system colors</primary>
+
+        <secondary>préférences</secondary>
+      </indexterm></title>
+
+    <para>
+Use this page to customize the system colors used by WinMerge. Enable
+<guilabel>Use custom system colors</guilabel>, select a system color from
+the list, and click its color box to choose a replacement color.</para>
+
+    <para>
+To revert to the default system colors, click
+<guibutton>Defaults</guibutton>.</para>
   </section>
 
   <section id="Configuration_archive">
@@ -3090,30 +3124,18 @@ numéro de la page de code. Par exemple, <userinput>UTF-8</userinput> ou
 
       <important>
         <para>
-<!--What option? The one in the Options page? If it should always be unchecked, 
-why is the option there? Also, should we mention WinMergeU.exe when we mention WinMerge.exe,
-or is this understood?-->
-Décochez cette option dans <filename>WinMerge.exe</filename>. Les
-conversions de caractères peuvent entraîner des pertes de données et le
-risque est très élevé. <filename>WinMerge.exe</filename> ne peut afficher
-les fichiers qu'avec votre page de code actuelle.</para>
+Character conversions can result in lossy conversions. Use this option with
+care when files use a codepage that differs from your current codepage.</para>
       </important>
 
       <itemizedlist>
         <listitem>
           <para>
-<option>Désactivé</option> (par défaut) : WinMerge ne lit pas les
-informations de page de code à partir des fichiers sources. Il utilise à la
-place le paramètre de page de code par défaut.</para>
-        </listitem>
-
-        <listitem>
-          <para>
-<option>Activé</option> : WinMerge détecte la page de code pour ces
-extensions : <filename class="extension">html</filename>, <filename
-class="extension">rc</filename> (fichiers de ressources pour VC++) et
-<filename class="extension">xml</filename>. La page de code détectée
-remplace le paramètre de l'option de page de code par défaut.</para>
+<option>Enabled</option> (default): WinMerge detects the codepage for these
+extensions: <filename class="extension">html</filename>, <filename
+class="extension">rc</filename> (resource files for VC++)  and <filename
+class="extension">xml</filename>. The detected codepage overrides the
+setting for the default codepage option.</para>
 
           <para>
 Cette option est intéressante lorsque vos documents utilisent une page de
@@ -3140,6 +3162,12 @@ Explorer propose une sélection de page de code. Si votre éditeur externe ne
 prend pas en charge les pages de codes personnalisées, désactivez cette
 option.</para>
           </caution>
+        </listitem>
+
+        <listitem>
+          <para>
+<option>Disabled</option>: WinMerge does not read codepage information from
+the source files. It uses the default codepage setting instead.</para>
         </listitem>
       </itemizedlist>
     </section>
@@ -3220,6 +3248,17 @@ tant que</guimenuitem> au menu contextuel de l'Explorateur.</para>
       <para>
 <xref linkend="OpenPaths_shell-integ" /> décrit comment utiliser les
 raccourcis WinMerge et Comparer.</para>
+    </section>
+
+    <section>
+      <title>Jump List</title>
+
+      <para>
+The Jump List displays recent comparisons and provides shortcuts for
+starting new text, table, binary, image, webpage, and folder comparisons, as
+well as comparing clipboard contents. Select an item to open it again, or
+click <guibutton>Clear all recent items</guibutton> to remove the recent
+comparison history.</para>
     </section>
   </section>
 </article>

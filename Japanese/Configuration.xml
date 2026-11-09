@@ -1642,6 +1642,23 @@ Frhed の設定<indexterm>
     </section>
 
     <section>
+      <title>Prefer WIC decoder</title>
+      <itemizedlist>
+        <listitem>
+          <para>
+<option>Disabled</option> (default): WinMerge uses its standard image
+decoder.</para>
+        </listitem>
+
+        <listitem>
+          <para>
+<option>Enabled</option>: WinMerge prefers the Windows Imaging Component
+(WIC) decoder when opening images.</para>
+        </listitem>
+      </itemizedlist>
+    </section>
+
+    <section>
       <title>OCRの結果</title>
       <itemizedlist>
         <listitem>
@@ -2007,13 +2024,15 @@ Rendering Modes</ulink>を参照してください。</para>
                 <itemizedlist>
                   <listitem>
                     <para>
-<guilabel>文字単位</guilabel>: 異なる文字をハイライトします。 このオプションは、単語内の変更を探す場合や、
-明確な単語分割をしていないファイルの場合に役立つでしょう。</para>
+<guilabel>Character level</guilabel> (default): Highlights individual
+characters that are different. This option can be useful if you are looking
+for changes within words, or for file formats that do not have clear word
+breaks.</para>
                   </listitem>
 
                   <listitem>
                     <para>
-<guilabel>単語単位</guilabel>(デフォルト) 差異のある単語全体をハイライトします。</para>
+<guilabel>Word-level</guilabel>: Highlights entire words that are different.</para>
 
                     <itemizedlist>
                       <listitem>
@@ -2256,6 +2275,24 @@ linkend="Configuration_syntaxhighlight"
 
     <para>
 配色のデフォルト色に戻すには、別の配色を選択してから、変更した配色に戻してください。</para>
+  </section>
+
+  <section id="Configuration_colors_system">
+    <title>
+Colors &gt; System page<indexterm>
+        <primary>system colors</primary>
+
+        <secondary>オプション</secondary>
+      </indexterm></title>
+
+    <para>
+Use this page to customize the system colors used by WinMerge. Enable
+<guilabel>Use custom system colors</guilabel>, select a system color from
+the list, and click its color box to choose a replacement color.</para>
+
+    <para>
+To revert to the default system colors, click
+<guibutton>Defaults</guibutton>.</para>
   </section>
 
   <section id="Configuration_archive">
@@ -2606,25 +2643,18 @@ WinMerge が、非Unicode ファイルを扱う際の、デフォルトコード
 
       <important>
         <para>
-<!--What option? The one in the Options page? If it should always be unchecked, 
-why is the option there? Also, should we mention WinMergeU.exe when we mention WinMerge.exe,
-or is this understood?-->
-<filename>WinMerge.exe</filename>では、このオプションはチェックを外してください。文字列変換は、不可逆変換を生じる可能性があり、そしてそれは、非常にハイリスクです。<filename>WinMerge.exe</filename>は、現在のコードページのファイルのみを表示することができます。</para>
+Character conversions can result in lossy conversions. Use this option with
+care when files use a codepage that differs from your current codepage.</para>
       </important>
 
       <itemizedlist>
         <listitem>
           <para>
-<option>無効</option>(デフォルト): WinMerge
-は、ソースファイルから、コードページ情報を読み取りません。その代わりに、デフォルトコードページ設定を使用します。</para>
-        </listitem>
-
-        <listitem>
-          <para>
-<option>有効</option>: WinMerge は、次の拡張子のコードページを検出します: <filename
-class="extension">html</filename>, <filename
-class="extension">rc</filename>(VC++ のリソースファイル), <filename
-class="extension"> xml</filename>。検出されたコードページは、デフォルトコードページオプションの設定を上書きします。</para>
+<option>Enabled</option> (default): WinMerge detects the codepage for these
+extensions: <filename class="extension">html</filename>, <filename
+class="extension">rc</filename> (resource files for VC++)  and <filename
+class="extension">xml</filename>. The detected codepage overrides the
+setting for the default codepage option.</para>
 
           <para>
 このオプションは、あなたのドキュメントが、 Windows のものと異なるコードページを使用する場合に重要です。</para>
@@ -2645,6 +2675,12 @@ WinMergeは、左右のファイル間のコードページの差異も検出し
 Explorer は、コードページ選択機能を提供しています。 外部エディターが、カスタムコードページをサポートしていない場合、
 このオプションは無効にしてください。</para>
           </caution>
+        </listitem>
+
+        <listitem>
+          <para>
+<option>Disabled</option>: WinMerge does not read codepage information from
+the source files. It uses the default codepage setting instead.</para>
         </listitem>
       </itemizedlist>
     </section>
@@ -2721,6 +2757,17 @@ The <option>コンテキストメニューに追加</option>オプションは�
       <para>
 <xref linkend="OpenPaths_shell-integ" />では、WinMerge と
 比較ショートカットの使用方法について説明しています。</para>
+    </section>
+
+    <section>
+      <title>Jump List</title>
+
+      <para>
+The Jump List displays recent comparisons and provides shortcuts for
+starting new text, table, binary, image, webpage, and folder comparisons, as
+well as comparing clipboard contents. Select an item to open it again, or
+click <guibutton>Clear all recent items</guibutton> to remove the recent
+comparison history.</para>
     </section>
   </section>
 </article>

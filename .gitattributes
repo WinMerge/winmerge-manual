@@ -1,0 +1,4 @@
+Docs/Manual/Manual.cfg text eol=lf
+Docs/Manual/English/*.xml text eol=lf
+Docs/Manual/Translations/Manual/*.po text eol=lf
+Docs/Manual/Translations/Manual/*.pot text eol=lf
